@@ -1,0 +1,39 @@
+.button {
+  text-decoration: none;
+  @include font($family: $primary-font, $size: 12px, $height: 12px, $weight: 700, $style: normal, $color: $white-color);
+  text-transform: uppercase;
+  @include flex-box($flex-direction: row, $justify-content: center);
+  width: 270px;
+  border: 2px solid $white-color;
+  padding: 27px 56px;
+  transition: color, background-color, border-color, 1s;
+
+  @media (max-width: $desktop-max-width) {
+    width: 185px;
+    padding: 22px 0px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 290px;
+  }
+
+  &:hover {
+    background-color: $white-color;
+    color: $primary-color;
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.80);
+    color: $primary-color;
+    border-color: #000000;
+  }
+
+  &:active {
+    background-color: $white-color;
+    color: $accent-color;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

@@ -1,32 +1,76 @@
 <!DOCTYPE html>
-<html lang="ru" data-validate="html">
+<html lang="ru" data-validate="html" class="page">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPERGYM</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUPERGYM</title>
+  <link rel="preload" href="fonts/Roboto-Condensed/RobotoCondensed-Regular.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/Roboto-Condensed/RobotoCondensed-Light.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/Roboto-Condensed/RobotoCondensed-Bold.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/Alumni/AlumniSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Alumni/AlumniSans-ExtraBold.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="sass/style.scss">
+  <script type="module" src="js/main.js" defer></script>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="price">price</div>
-    <div data-test="games">games</div>
-    <div data-test="juri">juri</div>
-    <div data-test="features">features</div>
-    <div data-test="offers">offers</div>
-    <div data-test="faq">faq</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+</head>
+
+<body class="page__body">
+  <section data-test="hero" class="hero">
+    <header class="hero__header header container">
+      <img class="header__logo logo" src="img/icons/logo.svg" width="130" height="26" alt="Логотип компании Supergym">
+      <a class="header__link" href="tel:8-800-555-55-55">8 800 555-55-55</a>
+    </header>
+
+    <div class="hero__container container">
+      <h1 class="visually-hidden">Сайт фитнес цента Supergym</h1>
+      <div class="hero__text-wrapper">
+        <p class="hero__text">Тренажёрный зал<br>
+          Групповые&nbsp;занятия<br>
+          Кардио-зона</p>
+        <p class="hero__subtitle">Омск</p>
+        <h2 class="hero__title">фитнес<br>центр</h2>
+        <a class="hero__link button" href="#">Купить абонемент</a>
+      </div>
+      <div>
+        <picture>
+          <source media="(min-width: 1360px)" srcset="img/image/hero-image@1x.webp 1x, img/image/hero-image@2x.webp 2x"
+            type="image/webp" width="500" height="524">
+          <source media="(min-width: 768px)" srcset="img/image/hero-image@1x.webp 1x, img/image/hero-image@2x.webp 2x"
+            type="image/webp" width="324" height="390">
+          <source media="(min-width: 1360px)" srcset="img/image/hero-image@1x.jpg 1x, img/image/hero-image@2x.jpg 2x"
+            type="image/jpg" width="500" height="524">
+          <source media="(min-width: 768px)" srcset="img/image/hero-image@1x.jpg 1x, img/image/hero-image@2x.jpg 2x"
+            type="image/jpg" width="324" height="390">
+          <img class="hero__image" loading="lazy" fetchpriority="high" src="img/image/hero-image@1x.jpg" width="324"
+            height="390" alt="Банка напитка Декаф Флэт уайт">
+        </picture>
+      </div>
+
+    </div>
+  </section>
+  <!-- пример использования спрайта
+  <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
+  <svg>
+    <use href="/__spritemap#sprite-user"></use>
+  </svg>
+   примеры требуемых атрибутов data-test="*"
+  <div data-test="hero">hero</div>
+  <div data-test="about">about</div>
+  <div data-test="price">price</div>
+  <div data-test="games">games</div>
+  <div data-test="juri">juri</div>
+  <div data-test="features">features</div>
+  <div data-test="offers">offers</div>
+  <div data-test="faq">faq</div>
+  <div data-test="reviews">reviews</div>
+  <div data-test="form">form</div>
+  <div data-test="footer">footer</div>
+  --->
+</body>
 
 </html>
