@@ -1,29 +1,29 @@
 .header {
   padding: 30px 103px;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
   @include flex-box($flex-direction: row, $justify-content: space-between);
 
-  @media (max-width: $desktop-max-width) {
-    padding-right: 45px;
-    padding-left: 45px;
+  @media (max-width: $tablet-max-width) {
+    padding: 30px 45px;
     margin-bottom: 0;
   }
 
   @media (max-width: $mobile-max-width) {
-    padding: 15px;
+    padding: 16px 15px;
   }
 }
 
 .header__link {
-  font-family: inherit;
-  color: inherit;
+  @include font($family: $primary-font, $size: 26px, $height: 26px, $weight: 700, $style: normal, $color: $white-color);
   text-decoration: none;
   transition: color, text-decoration, 0.5s;
+  margin-top: 2px;
 
-  @media (max-width: $desktop-max-width) {
+  @media (max-width: $tablet-max-width) {
     font-size: 24px;
     line-height: 24px;
+    margin-top: 0;
   }
 
   @media (max-width: $mobile-max-width) {

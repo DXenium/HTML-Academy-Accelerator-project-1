@@ -5,16 +5,17 @@
   @include flex-box($flex-direction: row, $justify-content: center);
   width: 270px;
   border: 2px solid $white-color;
-  padding: 27px 56px;
+  padding: 25px 56px;
   transition: color, background-color, border-color, 1s;
 
-  @media (max-width: $desktop-max-width) {
-    width: 185px;
-    padding: 22px 0px;
+  @media (max-width: $tablet-max-width) {
+    width: 187px;
+    padding: 20px 0px;
   }
 
   @media (max-width: $mobile-max-width) {
     width: 290px;
+    padding: 22px 0px;
   }
 
   &:hover {

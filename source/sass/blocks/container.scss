@@ -2,7 +2,7 @@
   max-width: $desktop-max-width;
   margin: 0 auto;
 
-  @media (max-width: $desktop-max-width) {
+  @media (max-width: $tablet-max-width) {
     max-width: $tablet-min-width;
   }
 

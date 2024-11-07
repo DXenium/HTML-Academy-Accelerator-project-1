@@ -6,13 +6,15 @@
 }
 
 .hero__container {
-  @include flex-box($flex-direction: row, $justify-content: center);
+  @include flex-box($flex-direction: row, $justify-content: flex-end);
   gap: 56px;
-  margin-bottom: 120px;
+  margin-bottom: 116px;
+  width: 1016px;
 
-  @media (max-width: $desktop-max-width) {
-    gap: 30px;
+  @media (max-width: $tablet-max-width) {
+    gap: 29px;
     margin-bottom: 100px;
+    width: 678px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -24,14 +26,14 @@
 .hero__text-wrapper {
   width: 385px;
   display: grid;
-  grid-template-columns: 115px 1fr;
-  grid-template-rows: 54px 14px 100px 100px 60px 1fr;
+  grid-template-columns: 155px 1fr;
+  grid-template-rows: 80px 15px 80px 115px 65px 1fr;
   gap: 0;
 
-  @media (max-width: $desktop-max-width) {
-    grid-template-columns: 113px 1fr;
-    grid-template-rows: 42px 10px 80px 80px 50px 1fr;
-    column-gap: 26px;
+  @media (max-width: $tablet-max-width) {
+    width: 324px;
+    display: block;
+    position: relative;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -40,8 +42,8 @@
     margin-top: 48px;
     display: grid;
     column-gap: 21px;
-    grid-template-columns: 113px 80px 53px;
-    grid-template-rows: 32px 14px 124px 48px 1fr;
+    grid-template-columns: 113px 83px 53px;
+    grid-template-rows: 32px 15px 124px 47px 1fr;
   }
 }
 
@@ -54,9 +56,18 @@
   grid-column: 1/2;
   grid-row: 4/5;
 
+  @media (max-width: $tablet-max-width) {
+    position: absolute;
+    top: 49%;
+    transform: translateY(-48%);
+  }
+
   @media (max-width: $mobile-max-width) {
-    grid-row: 3/4;
+    position: relative;
+    top: auto;
+    transform: none;
     line-height: 20px;
+    grid-row: 3/4;
     margin-top: auto;
   }
 }
@@ -69,9 +80,10 @@
   grid-column: 2/-1;
   grid-row: 1/2;
 
-  @media (max-width: $desktop-max-width) {
+  @media (max-width: $tablet-max-width) {
     font-size: 42px;
     line-height: 42px;
+    margin-bottom: 10px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -90,10 +102,11 @@
   grid-column: 2/-1;
   grid-row: 3/5;
 
-  @media (max-width: $desktop-max-width) {
+  @media (max-width: $tablet-max-width) {
     font-size: 72px;
     line-height: 85px;
     letter-spacing: 2px;
+    margin-bottom: 50px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -109,6 +122,10 @@
   grid-row: 6/-1;
   margin-left: auto;
 
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 5px;
+  }
+
   @media (max-width: $mobile-max-width) {
     grid-column: 1/-1;
     grid-row: 5/-1;
@@ -117,6 +134,12 @@
 }
 
 .hero__image {
+  margin-left: 40px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-left: 0;
+  }
+
   @media (max-width: $mobile-max-width) {
     display: none;
   }
