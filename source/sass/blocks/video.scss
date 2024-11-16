@@ -1,0 +1,129 @@
+.video__preview-wrapper {
+  line-height: 0;
+}
+
+.video {
+  position: relative;
+
+  @media (min-width: $tablet-min-width) {
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $tablet-max-width) {
+    bottom: -92px;
+  }
+}
+
+.video__button-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video__play-button {
+  cursor: pointer;
+  padding: 0;
+  width: 72px;
+  height: 72px;
+  position: relative;
+  border-radius: 50%;
+  border: 2px solid rgba($color: $secondary-color, $alpha: 0.2);
+  background: transparent;
+  box-shadow: inset 0 0 10px transparent;
+  transition: border-color, color, 1s;
+
+  @media (min-width: $tablet-max-width) {
+    width: 100px;
+    height: 100px;
+  }
+
+  &::before {
+    content: "";
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background, 1s;
+
+    @media (min-width: $tablet-max-width) {
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-55%, -50%);
+    z-index: 5;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 10px solid $white-color;
+    transition: border-left-color, 1s;
+  }
+}
+
+.video__play-button:hover {
+  border-color: rgba(16, 38, 84, 0.6);
+
+  &::before {
+    background: $white-color;
+  }
+
+  &::after {
+    border-left-color: rgba(16, 38, 84, 0.6);
+  }
+}
+
+.video__play-button:focus,
+.video__play-button:focus-visible {
+  outline: none;
+  border-color: $accent-color;
+
+
+  &::before {
+    background: #c8c9cc;
+  }
+
+  &::after {
+    border-left-color: $accent-color;
+  }
+}
+
+.video__play-button:active {
+  border-color: $accent-color;
+
+  &::before {
+    background: $white-color;
+  }
+
+  &::after {
+    border-left-color: $accent-color;
+  }
+}
+
+.video__play-button:disabled {
+  border-color: $accent-color;
+  opacity: 0.4;
+  cursor: none;
+
+  &::before {
+    background: $white-color;
+  }
+
+  &::after {
+    border-left-color: $accent-color;
+  }
+}

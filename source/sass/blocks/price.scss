@@ -1,0 +1,162 @@
+.price {
+  background-color: $secondary-white;
+
+  @include font($family: $primary-font, $size: 20px, $height: 20px, $weight: 400, $style: normal, $color: $accent-color);
+
+  text-align: center;
+
+  @media (min-width: $tablet-min-width) {
+    background-image: url("../../img/image/price-background.png");
+    background-repeat: no-repeat;
+    background-position-x: 111%;
+    background-position-y: 98%;
+    background-size: 345px auto;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    background-size: 396px auto;
+    background-position-x: 113%;
+    background-position-y: 93%;
+  }
+}
+
+.price__container {
+  margin: 40px auto;
+
+  @media (min-width: $tablet-min-width) {
+    margin: 60px auto;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    margin: 100px auto;
+  }
+}
+
+.price__title {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.price__buttons-wrapper {
+  @include flex-box($flex-direction: row, $justify-content: space-between);
+
+  width: 290px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+
+  @media (min-width: $tablet-min-width) {
+    width: 310px;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    width: 350px;
+    margin-bottom: 40px;
+  }
+}
+
+.price__tab-button {
+  cursor: pointer;
+  color: rgba(16, 38, 84, 0.5);
+  font-size: 16px;
+  line-height: 16px;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0 0 7px;
+  position: relative;
+  transition: color, 0.5s;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.price__tab-button:hover {
+  color: rgba(16, 38, 84, 0.7);
+}
+
+.price__tab-button:hover::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #787878;
+  position: absolute;
+  bottom: -2px;
+}
+
+.price__tab-button:focus,
+.price__tab-button:focus-visible {
+  color: $accent-color;
+  outline: none;
+}
+
+.price__tab-button:focus::before,
+.price__tab-button:focus-visible::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $accent-color;
+  position: absolute;
+  bottom: -2px;
+}
+
+.price__tab-button--active {
+  color: $accent-color;
+}
+
+.price__tab-button--active::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #d10a42;
+  position: absolute;
+  bottom: -2px;
+}
+
+.price__tab-button:disabled {
+  opacity: 0.3;
+  cursor: none;
+}
+
+.price__content-list {
+  display: none;
+}
+
+.price__content-list--active {
+  @include list-reset;
+  @include flex-box($flex-direction: column, $justify-content: center, $align-items: center);
+
+  gap: 35px;
+  margin: 0 auto;
+  width: 290px;
+
+  @media (min-width: $tablet-min-width) {
+    width: 380px;
+    gap: 39px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    width: 1160px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}

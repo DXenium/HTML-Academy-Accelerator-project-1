@@ -19,13 +19,13 @@
   color: $color;
 }
 
-@mixin list-reset () {
+@mixin list-reset() {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-@mixin flex-box ($align-items: center, $justify-content: space-between, $flex-direction: column) {
+@mixin flex-box($align-items: center, $justify-content: space-between, $flex-direction: column) {
   display: flex;
   flex-flow: $flex-direction wrap;
   align-items: $align-items;
