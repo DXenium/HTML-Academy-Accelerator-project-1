@@ -1,0 +1,57 @@
+.link {
+  text-decoration: none;
+  @include font($family: $primary-font, $size: 14px, $height: 14px, $weight: 700, $style: normal, $color: $white-color);
+  text-transform: uppercase;
+  position: relative;
+  transition: opacity, border, 0.5s;
+}
+
+.link::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: $white-color;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.link:focus,
+.link:focus-visible {
+  outline: none;
+}
+
+.link:focus::before,
+.link:focus-visible::before {
+  content: '';
+  width: 85px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border: 1px solid $white-color;
+}
+
+.link:focus::after,
+.link:focus-visible::after {
+  background-color: transparent;
+}
+
+.link:disabled {
+  opacity: 0.5;
+}
+
+.link--dark {
+  z-index: 2;
+  color: $background-color;
+}
+
+.link--dark::after {
+  background-color: $background-color;
+}

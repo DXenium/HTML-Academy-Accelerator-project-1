@@ -1,41 +1,44 @@
 .header {
-  padding: 30px 103px;
-  margin-bottom: 27px;
+  padding: 13px 15px;
 
-  @include flex-box($flex-direction: row, $justify-content: space-between);
+  @include flex-box($flex-direction: row, $justify-content: space-between, $align-items: flex-start);
 
-  @media (max-width: $tablet-max-width) {
-    padding: 30px 45px;
+  @media (min-width: $tablet-min-width) {
+    padding: 31px 45px 27px;
     margin-bottom: 0;
   }
 
-  @media (max-width: $mobile-max-width) {
-    padding: 16px 15px;
+  @media (min-width: $tablet-max-width) {
+    padding: 30px 103px;
+    align-items: center;
   }
 }
 
 .header__link {
-  @include font($family: $primary-font, $size: 26px, $height: 26px, $weight: 700, $style: normal, $color: $white-color);
+  @include font($family: $primary-font, $size: 22px, $height: 22px, $weight: 700, $style: normal, $color: $white-color);
+
   text-decoration: none;
   transition: color, text-decoration, 0.5s;
-  margin-top: 2px;
+  cursor: pointer;
 
-  @media (max-width: $tablet-max-width) {
+  @media (min-width: $tablet-min-width) {
     font-size: 24px;
-    line-height: 24px;
+    line-height: 22px;
     margin-top: 0;
   }
 
-  @media (max-width: $mobile-max-width) {
-    font-size: 22px;
-    line-height: 22px;
+  @media (min-width: $tablet-max-width) {
+    font-size: 26px;
+    line-height: 26px;
   }
 
   &:hover {
-    color: rgba(28, 51, 116, 0.50);
+    color: rgba(28, 51, 116, 0.5);
   }
 
-  &:focus {
+  &:focus,
+  &:focus-visible {
+    outline: none;
     color: $background-color;
   }
 
@@ -45,6 +48,7 @@
   }
 
   &:disabled {
+    cursor: none;
     color: $secondary-white;
   }
 }

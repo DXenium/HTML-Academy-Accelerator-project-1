@@ -1,0 +1,201 @@
+.card-price {
+  width: 290px;
+  background-color: $white-color;
+
+  @include flex-box($flex-direction: column, $justify-content: space-between);
+
+  padding: 50px 42px;
+  position: relative;
+  transition: background, 1s;
+
+  @media (min-width: $tablet-min-width) {
+    width: 380px;
+    padding-top: 66px;
+    padding-bottom: 64px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    width: 360px;
+    padding-top: 66px;
+    margin-bottom: 0;
+  }
+}
+
+.card-price:hover,
+.card-price:focus,
+.card-price:focus-visible {
+  background: $primary-gradient;
+}
+
+.card-price:hover::after,
+.card-price:focus::after,
+.card-price:focus-visible::after {
+  background-color: $white-color;
+  position: absolute;
+  content: '';
+  width: 346px;
+  height: 434px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-price__title {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 18px;
+  z-index: 1;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 17px;
+  }
+}
+
+.card-price__text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  margin-bottom: 65px;
+  z-index: 1;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    margin-bottom: 77px;
+  }
+}
+
+.card-price__detail {
+  position: relative;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    margin-bottom: 16px;
+  }
+}
+
+.card-price__price {
+  @include flex-box($flex-direction: row, $justify-content: space-between, $align-items: center);
+
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  color: $primary-color;
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 700;
+  position: inherit;
+  z-index: 2;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 60px;
+    line-height: 90px;
+  }
+}
+
+.card-price__price::before {
+  content: attr(title);
+  color: #e8e8e8;
+  font-size: 80px;
+  line-height: 120px;
+  font-weight: 700;
+  opacity: 0.48;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 100px;
+    line-height: 150px;
+  }
+}
+
+.card-price__price::after {
+  content: "";
+  width: 24px;
+  height: 33px;
+  display: block;
+  background-image: url("/__spritemap#sprite-ruble-icon-view");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+
+  @media (min-width: $tablet-min-width) {
+    width: 30px;
+    height: 42px;
+  }
+}
+
+.card-price__button {
+  color: $accent-color;
+  box-shadow: inset 0 0 0 2px $accent-color;
+  width: 206px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  transition: background, box-shadow, color, 1s;
+  z-index: 1;
+
+  @media (min-width: $tablet-min-width) {
+    width: 250px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    width: 230px;
+  }
+}
+
+.card-price__button:hover {
+  color: $white-color;
+  background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  box-shadow: none;
+}
+
+.card-price__button:focus,
+.card-price__button:focus-visible {
+  outline: none;
+  color: $white-color;
+  background: linear-gradient(97deg, rgba(237, 2, 51, 0.8) 17.6%, rgba(0, 62, 183, 0.8) 95.31%);
+  box-shadow: inset 0 0 0 2px #000000;
+}
+
+.card-price__button:active {
+  color: #d6bcd7;
+  background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  box-shadow: none;
+}
+
+.card-price__button:disabled {
+  opacity: 0.3;
+}
+
+.card-price:hover .card-price__button,
+.card-price:focus .card-price__button,
+.card-price:focus-visible .card-price__button {
+  outline: none;
+  color: $white-color;
+  background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  box-shadow: none;
+}
