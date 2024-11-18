@@ -24,6 +24,7 @@
 
 .offers__wrapper {
   @include flex-box($flex-direction: column, $justify-content: center);
+
   gap: 40px;
 
   @media (min-width: $tablet-min-width) {
@@ -52,7 +53,9 @@
 
 .offers__content {
   background-color: $secondary-color;
+
   @include font($family: $primary-font, $size: 16px, $height: 20px, $weight: 300, $style: normal, $color: $white-color);
+
   padding: 30px;
   padding-bottom: 37px;
   text-align: center;
@@ -132,8 +135,9 @@
 }
 
 .offers__details-list {
-  @include list-reset();
+  @include list-reset;
   @include flex-box($flex-direction: column, $justify-content: center);
+
   gap: 30px;
 
   @media (min-width: $tablet-min-width) {
@@ -150,8 +154,9 @@
 .offers__details-item {
   @include flex-box($flex-direction: column, $justify-content: center);
   @include font($family: $primary-font, $size: 14px, $height: 22px, $weight: 300, $style: normal, $color: $background-color);
+
   text-align: center;
-  background: linear-gradient(149deg, #D10A42 0.85%, #00359F 100%);
+  background: linear-gradient(149deg, #d10a42 0.85%, #00359f 100%);
   position: relative;
   padding: 27px 35px 33px;
   gap: 10px;
@@ -206,7 +211,6 @@
   }
 
   .offers__link {
-
     @media (min-width: $tablet-min-width) {
       margin-top: auto;
     }
@@ -218,7 +222,7 @@
 }
 
 .offers__details-item::after {
-  content: '';
+  content: "";
   width: calc(100% - 14px);
   height: calc(100% - 14px);
   position: absolute;

@@ -62,7 +62,9 @@
 .juri__content-wrapper {
   background-color: rgba(16, 38, 84, 0.89);
   width: 260px;
+
   @include flex-box($flex-direction: column, $justify-content: center);
+
   padding: 46px 41px;
   color: $white-color;
   position: absolute;
@@ -74,14 +76,18 @@
 .juri__content-title {
   margin: 0;
   padding: 0;
+
   @include font($family: $primary-font, $size: 22px, $height: 22px, $weight: 400, $style: normal, $color: $white-color);
+
   margin-bottom: 8px;
 }
 
 .juri__content-text {
   margin: 0;
   padding: 0;
+
   @include font($family: $primary-font, $size: 16px, $height: 24px, $weight: 300, $style: normal, $color: #B6BDCC);
+
   margin-bottom: 33px;
 }
 
@@ -89,8 +95,10 @@
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
+
   @include font($family: $primary-font, $size: 14px, $height: 22px, $weight: 400, $style: normal, $color: $white-color);
   @include flex-box($flex-direction: column, $justify-content: flex-start, $align-items: flex-start);
+
   gap: 12px;
 }
 
@@ -133,7 +141,7 @@
 .juri__button::after {
   width: 16px;
   height: 32px;
-  content: '';
+  content: "";
   mask-image: url("/__spritemap#sprite-arrow-view");
   mask-repeat: no-repeat;
   mask-size: auto;
@@ -143,13 +151,13 @@
 
 
 .juri__button:hover {
-  border: 1px solid var(--Dark, #102654);
+  border: 1px solid $accent-color;
 }
 
 .juri__button:focus,
 .juri__button:focus-visible {
-  border: 1px solid var(--Dark, #102654);
-  background: #E8E8E8;
+  border: 1px solid $accent-color;
+  background: #e8e8e8;
   outline: none;
 }
 
