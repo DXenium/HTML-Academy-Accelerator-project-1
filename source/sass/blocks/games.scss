@@ -57,6 +57,7 @@
 
 .games__title {
   @include font($family: $secondary-font, $size: 48px, $height: 54px, $weight: 600, $style: normal);
+
   text-align: left;
 
   text-transform: uppercase;

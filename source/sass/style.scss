@@ -1,7 +1,7 @@
 // Vendor // ---------------------------------
 
 @import "vendor/normalize";
-@import "vendor/swiper-bundle.min";
+@import "vendor/swiper-bundle";
 
 // Global // ---------------------------------
 
@@ -28,3 +28,5 @@
 @import "blocks/features";
 @import "blocks/offers";
 @import "blocks/link";
+@import "blocks/faq";
+@import "blocks/accordeon";

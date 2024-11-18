@@ -6,7 +6,7 @@
 
   padding: 50px 42px;
   position: relative;
-  transition: background, 1s;
+  transition: opacity, 1s;
 
   @media (min-width: $tablet-min-width) {
     width: 380px;
@@ -21,23 +21,34 @@
   }
 }
 
-.card-price:hover,
-.card-price:focus,
-.card-price:focus-visible {
+.card-price::before {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background: $primary-gradient;
+  opacity: 0;
+  transition: opacity, 1s;
 }
 
-.card-price:hover::after,
-.card-price:focus::after,
-.card-price:focus-visible::after {
+.card-price::after {
+  content: "";
   background-color: $white-color;
   position: absolute;
-  content: '';
   width: 346px;
   height: 434px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.card-price:hover::before,
+.card-price:focus::before,
+.card-price:focus-visible::before {
+  opacity: 1;
 }
 
 .card-price__title {

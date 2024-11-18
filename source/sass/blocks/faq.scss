@@ -1,0 +1,110 @@
+.faq {
+  background-color: $secondary-white;
+}
+
+.faq__container {
+  margin: 70px auto;
+  padding: 0 15px;
+
+  @media (min-width: $tablet-min-width) {
+    margin: 60px auto;
+    padding: 0 45px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    margin: 100px auto;
+    padding: 0 103px;
+  }
+}
+
+.faq__title {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    margin-bottom: 49px;
+    text-align: left;
+  }
+}
+
+.faq__wrapper {
+  @media (min-width: $tablet-max-width) {
+    @include flex-box($flex-direction: row, $align-items:flex-start, $justify-content: flex-start);
+
+    gap: 40px;
+  }
+}
+
+.faq__button-wrapper {
+  @include flex-box($flex-direction: row, $justify-content: space-between);
+
+  gap: 10px;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+}
+
+.faq__tab-button {
+  @include font($family: $primary-font, $size: 16px, $height: 16px, $weight: 400, $style: normal, $color: $accent-color);
+
+  flex-basis: calc(50% - 5px);
+
+  padding: 14px 20px;
+  cursor: pointer;
+  border: 1px solid rgba(16, 38, 84, 0.2);
+  background: transparent;
+  transition: background-color, color, border-color, 0.3s;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 18px;
+    line-height: 18px;
+    flex-basis: calc(25% - 8px);
+    padding: 17px 20px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    padding: 18px 20px 16px;
+    flex-basis: auto;
+    width: 260px;
+  }
+
+  &:hover {
+    border-color: $accent-color;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    border-color: $accent-color;
+    background-color: $white-color;
+  }
+
+  &:disabled {
+    color: #c8c9cc;
+    border-color: rgba(16, 38, 84, 0.2);
+  }
+}
+
+.faq__tab-button--active,
+.faq__tab-button:active {
+  color: $white-color;
+  background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  border-color: transparent;
+}
+
+.faq__content-wrapper {
+  @media (min-width: $tablet-max-width) {
+    flex-basis: calc(100% - 300px);
+  }
+}
