@@ -1,9 +1,9 @@
 import Swiper from './vendor/swiper/swiper-bundle';
 
-new Swiper('.swiper', {
+new Swiper('.juri__slider', {
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.juri__button--next',
+    prevEl: '.juri__button--prev',
   },
   a11y: {
     prevSlideMessage: 'Предыдущий слайд',
@@ -27,4 +27,23 @@ new Swiper('.swiper', {
     }
   },
   loop : true,
+});
+
+new Swiper('.reviews__swiper', {
+  navigation: {
+    nextEl: '.reviews__button--next',
+    prevEl: '.reviews__button--prev',
+  },
+  a11y: {
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
+  },
+  loop : false,
+  centeredSlides: true,
+  simulateTouch: true,
+  touchRatio: 1,
+  touchAngle: 45,
+  grabCursor: true,
+  slidesPerView: 1,
+  spaceBetween: 60,
 });
