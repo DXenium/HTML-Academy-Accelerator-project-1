@@ -115,16 +115,7 @@
 }
 
 .juri__button {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  border: none;
-  background-color: $white-color;
-  transition: all 0.5s;
-  display: none;
-
   @media (min-width: $tablet-min-width) {
-    display: flex;
     top: 61%;
   }
 }
@@ -136,39 +127,4 @@
 .juri__button--next {
   right: 33px;
   transform: rotate(180deg);
-}
-
-.juri__button::after {
-  width: 16px;
-  height: 32px;
-  content: "";
-  mask-image: url("/__spritemap#sprite-arrow-view");
-  mask-repeat: no-repeat;
-  mask-size: auto;
-  mask-position: center;
-  background-color: $accent-color;
-}
-
-
-.juri__button:hover {
-  border: 1px solid $accent-color;
-}
-
-.juri__button:focus,
-.juri__button:focus-visible {
-  border: 1px solid $accent-color;
-  background: #e8e8e8;
-  outline: none;
-}
-
-.juri__button:active {
-  background-color: $accent-color;
-}
-
-.juri__button:active.juri__button::after {
-  background-color: $white-color;
-}
-
-.juri__button:disabled.juri__button::after {
-  background-color: rgba(16, 38, 84, 0.3);
 }
