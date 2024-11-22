@@ -6,7 +6,13 @@
   text-align: center;
 
   @media (min-width: $tablet-min-width) {
-    background-image: url("../../img/image/price-background.png");
+    background-image:
+      image-set(
+        url("../../img/image/price-background@2x.webp") type("image/webp") 2x,
+        url("../../img/image/price-background@1x.webp") type("image/webp") 1x,
+        url("../../img/image/price-background@2x.png") type("image/png") 2x,
+        url("../../img/image/price-background@1x.png") type("image/png") 1x
+      );
     background-repeat: no-repeat;
     background-position-x: 111%;
     background-position-y: 98%;
@@ -131,7 +137,8 @@
   bottom: -2px;
 }
 
-.price__tab-button:disabled {
+.price__tab-button:disabled,
+.price__tab-button--disabled {
   opacity: 0.3;
   cursor: none;
 }

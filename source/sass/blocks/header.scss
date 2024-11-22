@@ -47,7 +47,8 @@
     text-decoration: underline;
   }
 
-  &:disabled {
+  &:disabled,
+  &--disabled {
     cursor: none;
     color: $secondary-white;
   }

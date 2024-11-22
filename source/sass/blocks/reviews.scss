@@ -50,12 +50,16 @@
   @include flex-box($flex-direction: column, $justify-content: center);
   @include font($family: $primary-font, $size: 14px, $height: 22px, $weight: 300, $style: normal, $color: $white-color);
 
+  max-height: 328px;
+  overflow: scroll;
+
   text-align: center;
   width: 190px;
   gap: 10px;
 
   @media (min-width: $tablet-min-width) {
     width: 440px;
+    max-height: 162px;
     text-align: left;
     font-size: 24px;
     line-height: 16px;
@@ -67,14 +71,25 @@
 
   @media (min-width: $tablet-max-width) {
     gap: 30px;
+    max-height: 138px;
   }
 
   div:first-of-type {
     line-height: 0;
+    width: 68px;
+    height: 68px;
+    background-color: $background-color;
+
+    @media (min-width: $tablet-min-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   img {
     border-radius: 50%;
+    object-fit: cover;
+    text-indent: -100vw;
 
     @media (min-width: $tablet-min-width) {
       width: 80px;
@@ -102,6 +117,7 @@
     text-align: center;
     padding: 0;
     margin: 0;
+    max-height: 190px;
 
     @media (min-width: $tablet-min-width) {
       text-align: left;

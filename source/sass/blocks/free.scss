@@ -1,0 +1,78 @@
+.free {
+  background-color: $accent-color;
+  color: $white-color;
+  padding: 70px 15px;
+
+  @media (min-width: $tablet-min-width) {
+    padding: 60px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    padding: 60px 103px;
+    flex-basis: 50%;
+  }
+}
+
+.free__title {
+  color: $white-color;
+  text-align: left;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-min-width) {
+    text-align: center;
+    font-size: 54px;
+    line-height: 54px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    text-align: left;
+  }
+}
+
+.free__form {
+  @media (min-width: $tablet-min-width) {
+    width: 440px;
+
+    @include flex-box($flex-direction: row, $justify-content: flex-start);
+
+    gap: 34px 30px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    width: 477px;
+  }
+}
+
+.free__name,
+.free__phone {
+  @include font($family: $primary-font, $size: 14px, $height: 22px, $weight: 300, $style: normal, $color: $white-color);
+
+  opacity: 0.4;
+  width: 100%;
+  margin-bottom: 36px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #74819c;
+  padding: 2px;
+
+  @media (min-width: $tablet-min-width) {
+    width: 205px;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    width: 223px;
+  }
+}
+
+.free__button {
+  background-color: transparent;
+  border: none;
+
+  @media (min-width: $tablet-min-width) {
+    flex-basis: 100%;
+    padding: 27px;
+  }
+}

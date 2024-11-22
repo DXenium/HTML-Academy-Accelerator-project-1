@@ -198,7 +198,8 @@
   box-shadow: none;
 }
 
-.card-price__button:disabled {
+.card-price__button:disabled,
+.card-price__button--disabled {
   opacity: 0.3;
 }
 

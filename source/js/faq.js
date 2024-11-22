@@ -6,8 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // Устанавливаем первый таб и первый аккордеон активными по умолчанию
   tabButtons[0].classList.add('faq__tab-button--active');
   accordionContainers[0].classList.add('accordeon__container--active');
-  accordions[0].classList.add('accordeon__item--active');
-  accordions[0].querySelector('.accordeon__button').classList.add('accordeon__button--open');
+
+  // Делаем первый аккордеон в каждом табе открытым по умолчанию
+  accordionContainers.forEach((container) => {
+    const firstAccordion = container.querySelector('.accordeon__item');
+    if (firstAccordion) {
+      firstAccordion.classList.add('accordeon__item--active');
+      const button = firstAccordion.querySelector('.accordeon__button');
+      if (button) {
+        button.classList.add('accordeon__button--open');
+      }
+    }
+  });
 
   // Обработчик для переключения табов
   tabButtons.forEach((button, index) => {

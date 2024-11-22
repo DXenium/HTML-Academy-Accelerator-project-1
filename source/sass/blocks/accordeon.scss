@@ -188,10 +188,12 @@
   background-color: $white-color;
 }
 
-.accordeon__button:disabled {
+.accordeon__button:disabled,
+.accordeon__button--disabled {
   opacity: 0.3;
 }
 
-.accordeon__button:disabled::before {
+.accordeon__button:disabled::before,
+.accordeon__button--disabled::before {
   opacity: 0.3;
 }

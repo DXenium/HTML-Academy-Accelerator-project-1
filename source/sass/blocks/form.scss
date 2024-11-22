@@ -1,0 +1,11 @@
+.form {
+  @media (min-width: $tablet-max-width) {
+    background: linear-gradient(to right, $accent-color 50%, $white-color 50%);
+  }
+}
+
+.form__container {
+  @media (min-width: $tablet-max-width) {
+    @include flex-box($flex-direction: row, $justify-content: center);
+  }
+}
