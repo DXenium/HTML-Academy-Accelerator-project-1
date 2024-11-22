@@ -90,7 +90,8 @@
     background-color: $white-color;
   }
 
-  &:disabled {
+  &:disabled,
+  &--disabled {
     color: #c8c9cc;
     border-color: rgba(16, 38, 84, 0.2);
   }

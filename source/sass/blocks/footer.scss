@@ -1,0 +1,112 @@
+.footer {
+  background-color: $dark-color;
+}
+
+.footer__container {
+  @include font($family: $primary-font, $size: 14px, $height: 20px, $weight: 400, $style: normal, $color: $white-color);
+  @include flex-box($flex-direction: column, $justify-content: flex-start, $align-items: flex-start);
+
+  gap: 30px;
+  padding: 40px 15px;
+
+  @media (min-width: $tablet-min-width) {
+    padding: 45px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    padding: 40px 0;
+    width: 1160px;
+    align-items: center;
+  }
+}
+
+.footer__logo {
+  line-height: 0;
+  width: 100px;
+  height: 20px;
+
+  @media (min-width: $tablet-min-width) {
+    width: 110px;
+    height: 22px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    width: 130px;
+    height: 26px;
+  }
+}
+
+.footer__list {
+  @include list-reset;
+  @include flex-box($flex-direction: row, $justify-content: flex-start, $align-items: center);
+
+  gap: 20px 35px;
+
+  @media (min-width: $tablet-min-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    gap: 20px 82px;
+  }
+}
+
+.footer__link {
+  @include font($family: $primary-font, $size: 14px, $height: 20px, $weight: 400, $style: normal, $color: $white-color);
+
+  text-decoration: none;
+  position: relative;
+}
+
+.footer__link:hover::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: $white-color;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.footer__link:focus,
+.footer__link:focus-visible {
+  outline: none;
+}
+
+.footer__link:focus::before,
+.footer__link:focus-visible::before {
+  content: "";
+  width: 85px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border: 1px solid $white-color;
+}
+
+.footer__link:active,
+.footer__link:disabled,
+.footer__link--disabled {
+  opacity: 0.4;
+}
+
+.footer__social {
+  @include list-reset;
+  @include flex-box($flex-direction: row, $justify-content: flex-start, $align-items: center);
+
+  gap: 20px;
+
+  @media (min-width: $tablet-min-width) {
+    gap: 15px;
+  }
+
+  @media (min-width: $tablet-max-width) {
+    gap: 10px;
+  }
+}
+

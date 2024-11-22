@@ -114,7 +114,8 @@
   }
 }
 
-.video__play-button:disabled {
+.video__play-button:disabled,
+.video__play-button--disabled {
   border-color: $accent-color;
   opacity: 0.4;
   cursor: none;

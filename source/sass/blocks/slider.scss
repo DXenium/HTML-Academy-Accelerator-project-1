@@ -42,6 +42,7 @@
   background-color: $white-color;
 }
 
-.slider__button:disabled.slider__button::after {
+.slider__button:disabled.slider__button::after,
+.slider__button--disabled.slider__button::after {
   background-color: rgba(16, 38, 84, 0.3);
 }

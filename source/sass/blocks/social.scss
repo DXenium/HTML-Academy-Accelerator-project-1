@@ -1,0 +1,71 @@
+.social__link {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  min-width: 25px;
+  min-height: 25px;
+  display: block;
+  transition: background-color 0.3s;
+  border-radius: 50%;
+  background-color: $white-color;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: $dark-color;
+    transition: background-color, 0.3s;
+    mask-size: auto;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--vk::before {
+    mask-image: url("/__spritemap#sprite-icon-vk-view");
+  }
+
+  &--ok::before {
+    mask-image: url("/__spritemap#sprite-icon-ok-view");
+  }
+
+  &--rd::before {
+    mask-image: url("/__spritemap#sprite-icon-rd-view");
+  }
+}
+
+.social__link:hover {
+  background-color: #74819c;
+}
+
+.social__link:hover::before {
+  background-color: $white-color;
+}
+
+.social__link:focus,
+.social__link:focus-visible {
+  background-color: #103aae;
+  outline: none;
+}
+
+.social__link:focus::before,
+.social__link:focus-visible::before {
+  background-color: $white-color;
+}
+
+.social__link:active {
+  background-color: #102654;
+}
+
+.social__link:active::before {
+  background-color: $white-color;
+}
+
+.social__link--disabled,
+.social__link:disabled {
+  opacity: 0.3;
+}
