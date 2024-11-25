@@ -1,14 +1,14 @@
 .free {
   background-color: $accent-color;
   color: $white-color;
-  padding: 70px 15px;
+  padding: 70px 15px 54px;
 
   @media (min-width: $tablet-min-width) {
-    padding: 60px;
+    padding: 60px 60px 42px;
   }
 
   @media (min-width: $tablet-max-width) {
-    padding: 60px 103px;
+    padding: 60px 103px 40px;
     flex-basis: 50%;
   }
 }
@@ -16,7 +16,7 @@
 .free__title {
   color: $white-color;
   text-align: left;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-min-width) {
     text-align: center;
@@ -30,31 +30,40 @@
 }
 
 .free__form {
+  @include flex-box($flex-direction: column, $justify-content: flex-start, $align-items: normal);
+
+  gap: 6px 30px;
+
   @media (min-width: $tablet-min-width) {
+    gap: 7px 30px;
     width: 440px;
-
-    @include flex-box($flex-direction: row, $justify-content: flex-start);
-
-    gap: 34px 30px;
+    flex-direction: row;
     margin: 0 auto;
   }
 
   @media (min-width: $tablet-max-width) {
+    gap: 8px 30px;
     width: 477px;
   }
+}
+
+.free__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto calc(14px * 2);
 }
 
 .free__name,
 .free__phone {
   @include font($family: $primary-font, $size: 14px, $height: 22px, $weight: 300, $style: normal, $color: $white-color);
 
-  opacity: 0.4;
   width: 100%;
-  margin-bottom: 36px;
+  margin-bottom: 0;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #74819c;
-  padding: 2px;
+  border-bottom: 1px solid rgba($color: $white-color, $alpha: 0.4);
+  padding: 4px;
+  transition: color, border-color, outline, border-bottom, 0.3s;
 
   @media (min-width: $tablet-min-width) {
     width: 205px;
@@ -64,6 +73,27 @@
 
   @media (min-width: $tablet-max-width) {
     width: 223px;
+  }
+
+  &::placeholder {
+    color: rgba($color: $white-color, $alpha: 0.4);
+  }
+
+  &:hover {
+    border-color: $white-color;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 1px solid $white-color;
+    border-bottom: none;
+    color: $white-color;
+  }
+
+  &:disabled {
+    outline: 1px solid rgba($color: $white-color, $alpha: 0.4);
+    color: rgba($color: $white-color, $alpha: 0.4);
+    border-bottom: none;
   }
 }
 
@@ -75,4 +105,45 @@
     flex-basis: 100%;
     padding: 27px;
   }
+}
+
+.free__input:invalid:not(:placeholder-shown) {
+  border-bottom-color: #ff121f;
+}
+
+/* Для изменения цвета обводки элемента формы при валидации */
+.free__input--error {
+  border-bottom: 1px solid #ff121f;
+}
+
+.free__error {
+  display: none;
+  color: #ff121f;
+  grid-column: 1;
+  align-self: self-start;
+  grid-row-end: span 2;
+  font-size: 14px;
+  line-height: 1.1;
+  inline-size: 223px;
+  padding: 5px;
+
+  @media (min-width: $tablet-min-width) {
+    inline-size: 205px;
+  }
+}
+
+/* Для отображения span-элемента с ошибкой */
+.free__error--active {
+  display: block;
+}
+
+/* Для блокировки кнопки submit */
+.free__button--inactive {
+  cursor: default;
+}
+
+.free__empty--error {
+  padding: 5px 0;
+  font-size: 14px;
+  color: #ff121f;
 }
