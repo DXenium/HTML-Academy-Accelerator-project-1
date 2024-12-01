@@ -49,6 +49,7 @@
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 80px 40px;
+      grid-auto-flow: dense;
     }
   }
 
@@ -72,7 +73,7 @@
       width: 100%;
       justify-content: space-between;
       align-self: flex-start;
-      gap: 44px;
+      gap: 42px;
       position: relative;
       padding-bottom: 10px;
     }
@@ -86,9 +87,27 @@
   }
 
   li:nth-child(3) {
+    gap: 5px;
+    background-color: $background-color;
+    color: $white-color;
+    margin: 5px auto;
+    padding: 30px 75px 40px;
+
+    @media (min-width: $tablet-min-width) {
+      width: 320px;
+      margin: 0 50px;
+      padding: 35px;
+      flex-direction: column;
+      align-items: center;
+    }
+
     @media (min-width: $tablet-max-width) {
       grid-column: 2/3;
       grid-row: 1/-1;
+      margin: 0;
+      padding: 59px 40px 57px;
+      width: 360px;
+      align-self: baseline;
     }
   }
 
@@ -169,30 +188,7 @@
     }
   }
 
-  li:nth-child(3n) {
-    gap: 5px;
-    background-color: $background-color;
-    color: $white-color;
-    margin: 5px auto;
-    padding: 30px 75px 40px;
-
-    @media (min-width: $tablet-min-width) {
-      width: 320px;
-      margin: 0 50px;
-      padding: 35px;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    @media (min-width: $tablet-max-width) {
-      margin: 0;
-      padding: 59px 40px 57px;
-      width: 360px;
-      align-self: baseline;
-    }
-  }
-
-  li:nth-child(3n) h3 {
+  li:nth-child(3) h3 {
     background: $white-color;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -206,7 +202,7 @@
     }
   }
 
-  li:nth-child(3n) div:not(:first-of-type) p:first-of-type {
+  li:nth-child(3) div:not(:first-of-type) p:first-of-type {
     font-size: 22px;
     font-weight: 700;
     line-height: 22px;
@@ -226,10 +222,12 @@
     }
   }
 
-  li:nth-child(3n) p {
+  li:nth-child(3) p {
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
+    color: $white-color;
+    text-align: center;
 
     @media (min-width: $tablet-min-width) {
       font-size: 16px;
@@ -246,25 +244,22 @@
     @media (min-width: $tablet-min-width) {
       flex: 1;
     }
-  }
 
-  li:nth-child(2) div:last-of-type,
-  li:nth-child(5) div:last-of-type {
     @media (min-width: $tablet-max-width) {
       flex: 0 0 auto;
       width: 210px;
     }
   }
 
-  li:nth-child(3n) div:last-of-type {
+  li:nth-child(3) div:last-of-type {
     @media (min-width: $tablet-min-width) {
       width: 100%;
       text-align: center;
     }
   }
 
-  li:first-child::after,
-  li:nth-child(2)::after {
+  li:nth-child(5n+1)::after,
+  li:nth-child(6n+2)::after {
     @media (min-width: $tablet-max-width) {
       content: "";
       width: 360px;

@@ -97,9 +97,17 @@
   }
 }
 
+.free__name:focus::placeholder,
+.free__name:focus-visible::placeholder,
+.free__phone:focus::placeholder,
+.free__phone:focus-visible::placeholder {
+  color: transparent;
+}
+
 .free__button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   @media (min-width: $tablet-min-width) {
     flex-basis: 100%;

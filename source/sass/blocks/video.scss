@@ -6,14 +6,14 @@
   position: relative;
 
   @media (min-width: $tablet-min-width) {
-    position: absolute;
-    bottom: -85px;
-    left: 50%;
-    transform: translateX(-50%);
+    grid-row: 3 / -1;
   }
 
   @media (min-width: $tablet-max-width) {
-    bottom: -92px;
+    grid-row: 2/-1;
+    grid-column: 2/-1;
+    justify-self: start;
+    align-self: start;
   }
 }
 
