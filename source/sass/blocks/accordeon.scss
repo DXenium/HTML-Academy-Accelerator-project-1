@@ -114,10 +114,11 @@
   width: 30px;
   height: 30px;
   border-radius: 15px;
+  cursor: pointer;
   border: 1px solid $background-color;
   background-color: transparent;
   position: absolute;
-  top: 35%;
+  top: calc(50% - 15px);
   right: 0;
   transition: background-color, opacity, 0.5s;
 

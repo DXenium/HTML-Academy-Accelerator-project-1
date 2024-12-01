@@ -36,7 +36,6 @@
 
   @media (min-width: $tablet-max-width) {
     flex-direction: row;
-    align-items: flex-end;
     justify-content: space-between;
     gap: 40px;
     width: 1160px;
@@ -132,6 +131,12 @@
 
 .offers__image-wrapper {
   line-height: 0;
+}
+
+.offers__details {
+  @media (min-width: $tablet-max-width) {
+    align-self: end;
+  }
 }
 
 .offers__details-list {

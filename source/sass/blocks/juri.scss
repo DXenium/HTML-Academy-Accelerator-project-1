@@ -60,10 +60,13 @@
 .juri__content-wrapper {
   background-color: rgba(16, 38, 84, 0.89);
   width: 260px;
+  height: 100%;
 
   @include flex-box($flex-direction: column, $justify-content: center);
 
-  padding: 46px 41px;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  padding: 46px 41px 45px;
   color: $white-color;
   position: absolute;
   top: -101%;

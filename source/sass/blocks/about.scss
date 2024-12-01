@@ -4,20 +4,20 @@
 
   @media (min-width: $tablet-min-width) {
     text-align: center;
-    margin-top: 61px;
-    margin-bottom: 120px;
-    position: relative;
+    margin-top: 60px;
+    margin-bottom: 35px;
+    display: grid;
+    grid-template-rows: auto 260px auto;
   }
 
   @media (min-width: $tablet-max-width) {
     text-align: left;
-    margin: 120px auto;
-    margin-bottom: 216px;
+    margin: 120px auto 125px;
     width: 1160px;
-
-    @include flex-box($flex-direction: row, $justify-content: center);
-
-    gap: 145px;
+    grid-template-columns: auto 55px auto;
+    grid-template-rows: 265px auto;
+    gap: 20px;
+    justify-content: space-between;
   }
 }
 
@@ -36,6 +36,7 @@
 
   @media (min-width: $tablet-max-width) {
     max-width: 355px;
+    grid-row: 1/-1;
   }
 
   p:not(:first-of-type) {
@@ -81,7 +82,6 @@
 
   @media (min-width: $tablet-min-width) {
     font-size: 20px;
-    margin-bottom: 35px;
   }
 
   @media (min-width: $tablet-max-width) {
@@ -93,10 +93,14 @@
 
 .about__img-wrapper {
   line-height: 0;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 0;
+  }
 
   @media (min-width: $tablet-max-width) {
-    margin-bottom: 0;
-    align-self: baseline;
+    grid-column: -2/-1;
+    grid-row: 1/2;
   }
 }

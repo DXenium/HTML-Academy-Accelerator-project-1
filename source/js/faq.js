@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   accordions.forEach((accordion) => {
     const button = accordion.querySelector('.accordeon__button');
 
-    button.addEventListener('click', () => {
+    accordion.addEventListener('click', () => {
       accordion.classList.toggle('accordeon__item--active');
       button.classList.toggle('accordeon__button--open');
     });
@@ -58,11 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   accordions.forEach((accordion) => {
-    const button = accordion.querySelector('.accordeon__button');
-    button.addEventListener('keydown', (event) => {
+    accordion.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        button.click();
+        accordion.click();
       }
     });
   });
