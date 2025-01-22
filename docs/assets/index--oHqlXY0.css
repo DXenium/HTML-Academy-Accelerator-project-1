@@ -974,7 +974,7 @@ img {
   font-family: Roboto Condensed;
   font-weight: 400;
   font-style: normal;
-  src: url(../../source/fonts/roboto-condensed/RobotoCondensed-VariableFont.woff2) format("woff2"), url(../../source/fonts/Roboto-Condensed/RobotoCondensed-VariableFont.woff) format("woff");
+  src: url(./RobotoCondensed-VariableFont-BuyDUUd_.woff2) format("woff2"), url(../../source/fonts/Roboto-Condensed/RobotoCondensed-VariableFont.woff) format("woff");
   font-display: swap
 }
 
@@ -982,7 +982,7 @@ img {
   font-family: Roboto Condensed;
   font-weight: 300;
   font-style: normal;
-  src: url(../../source/fonts/roboto-condensed/RobotoCondensed-VariableFont.woff2) format("woff2"), url(../../source/fonts/Roboto-Condensed/RobotoCondensed-VariableFont.woff) format("woff");
+  src: url(./RobotoCondensed-VariableFont-BuyDUUd_.woff2) format("woff2"), url(../../source/fonts/Roboto-Condensed/RobotoCondensed-VariableFont.woff) format("woff");
   font-display: swap
 }
 
@@ -990,7 +990,7 @@ img {
   font-family: Roboto Condensed;
   font-weight: 700;
   font-style: normal;
-  src: url(../../source/fonts/roboto-condensed/RobotoCondensed-VariableFont.woff2) format("woff2"), url(../../source/fonts/Roboto-Condensed/RobotoCondensed-VariableFont.woff) format("woff");
+  src: url(./RobotoCondensed-VariableFont-BuyDUUd_.woff2) format("woff2"), url(../../source/fonts/Roboto-Condensed/RobotoCondensed-VariableFont.woff) format("woff");
   font-display: swap
 }
 
@@ -998,7 +998,7 @@ img {
   font-family: Alumni Sans;
   font-weight: 600;
   font-style: normal;
-  src: url(../../source/fonts/alumni/AlumniSans-VariableFont.woff2) format("woff2"), url(../../source/fonts/Alumni/AlumniSans-VariableFont.woff) format("woff");
+  src: url(./AlumniSans-VariableFont-CTFP_a6r.woff2) format("woff2"), url(../../source/fonts/Alumni/AlumniSans-VariableFont.woff) format("woff");
   font-display: swap
 }
 
@@ -1006,7 +1006,7 @@ img {
   font-family: Alumni Sans;
   font-weight: 800;
   font-style: normal;
-  src: url(../../source/fonts/alumni/AlumniSans-VariableFont.woff2) format("woff2"), url(../../source/fonts/Alumni/AlumniSans-VariableFont.woff) format("woff");
+  src: url(./AlumniSans-VariableFont-CTFP_a6r.woff2) format("woff2"), url(../../source/fonts/Alumni/AlumniSans-VariableFont.woff) format("woff");
   font-display: swap
 }
 
