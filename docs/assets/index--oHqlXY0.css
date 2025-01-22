@@ -2043,7 +2043,7 @@ img {
   width: 24px;
   height: 33px;
   display: block;
-  background-image: url(/assets/spritemap.3d922c83.svg#sprite-ruble-icon-view);
+  background-image: url(./spritemap.3d922c83.svg#sprite-ruble-icon-view);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center
@@ -2363,8 +2363,8 @@ img {
   width: 16px;
   height: 32px;
   content: "";
-  -webkit-mask-image: url(/assets/spritemap.3d922c83.svg#sprite-arrow-view);
-  mask-image: url(/assets/spritemap.3d922c83.svg#sprite-arrow-view);
+  -webkit-mask-image: url(./spritemap.3d922c83.svg#sprite-arrow-view);
+  mask-image: url(./spritemap.3d922c83.svg#sprite-arrow-view);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: auto;
@@ -3562,8 +3562,8 @@ img {
   width: 14px;
   height: 14px;
   content: "";
-  -webkit-mask-image: url(/assets/spritemap.3d922c83.svg#sprite-plus-view);
-  mask-image: url(/assets/spritemap.3d922c83.svg#sprite-plus-view);
+  -webkit-mask-image: url(./spritemap.3d922c83.svg#sprite-plus-view);
+  mask-image: url(./spritemap.3d922c83.svg#sprite-plus-view);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: auto;
@@ -3591,8 +3591,8 @@ img {
 
 .accordeon__button--open:before {
   height: 2px;
-  -webkit-mask-image: url(/assets/spritemap.3d922c83.svg#sprite-minus-view);
-  mask-image: url(/assets/spritemap.3d922c83.svg#sprite-minus-view);
+  -webkit-mask-image: url(./spritemap.3d922c83.svg#sprite-minus-view);
+  mask-image: url(./spritemap.3d922c83.svg#sprite-minus-view);
   background-color: #fff;
   transform: translate(-50%, -60%)
 }
@@ -4427,18 +4427,18 @@ img {
 }
 
 .social__link--vk:before {
-  -webkit-mask-image: url(/assets/spritemap.3d922c83.svg#sprite-icon-vk-view);
-  mask-image: url(/assets/spritemap.3d922c83.svg#sprite-icon-vk-view)
+  -webkit-mask-image: url(./spritemap.3d922c83.svg#sprite-icon-vk-view);
+  mask-image: url(./spritemap.3d922c83.svg#sprite-icon-vk-view)
 }
 
 .social__link--ok:before {
-  -webkit-mask-image: url(/assets/spritemap.3d922c83.svg#sprite-icon-ok-view);
-  mask-image: url(/assets/spritemap.3d922c83.svg#sprite-icon-ok-view)
+  -webkit-mask-image: url(./spritemap.3d922c83.svg#sprite-icon-ok-view);
+  mask-image: url(./spritemap.3d922c83.svg#sprite-icon-ok-view)
 }
 
 .social__link--rd:before {
-  -webkit-mask-image: url(/assets/spritemap.3d922c83.svg#sprite-icon-rd-view);
-  mask-image: url(/assets/spritemap.3d922c83.svg#sprite-icon-rd-view)
+  -webkit-mask-image: url(./spritemap.3d922c83.svg#sprite-icon-rd-view);
+  mask-image: url(./spritemap.3d922c83.svg#sprite-icon-rd-view)
 }
 
 .social__link:hover {
